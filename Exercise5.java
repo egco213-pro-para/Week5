@@ -1,4 +1,3 @@
-
 package exercise.pkg5;
 
 import java.util.*;
@@ -20,9 +19,7 @@ class CookingOil implements Comparable <CookingOil> {
    {
        System.out.printf("%-30s mono = (%d)  poly = %5d sat = %5d\r\n",name,mono,poly,sat);
    }
-   
    @Override
-   
    public int compareTo(CookingOil other)  
    {
        if (this.mono > other.mono) return -1;
@@ -30,23 +27,16 @@ class CookingOil implements Comparable <CookingOil> {
        
        if (this.poly > other.poly) return -1;
        else if (this.poly < other.poly) return 1;
-       
-       
+         
        if (this.sat > other.sat) return -1;
        else if (this.sat < other.sat) return 1;
-       
-       
+        
        if (this.name.compareToIgnoreCase(other.name) < 0) return -1;
        else return 1;
    }
 }
-
-
 public class Exercise5 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
             String infile = "fat.txt";
             ArrayList <CookingOil> C = new ArrayList <CookingOil> ();
@@ -68,8 +58,5 @@ public class Exercise5 {
             }
             Collections.sort(C);
             for(int i=0;i<C.size();i++) C.get(i).report();
-
-            
-    
 }
 }
